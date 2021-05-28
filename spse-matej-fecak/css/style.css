@@ -1,0 +1,899 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+  font-size: 10px;
+  color: #333;
+}
+
+header .nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #252525;
+  position: relative;
+}
+header .logo {
+  max-width: 20%;
+  margin: 0 30px;
+  display: inline-block;
+  text-decoration: none;
+}
+header .logo .desktop {
+  max-height: 22px;
+}
+header .logo .phone {
+  display: none;
+  width: 40px;
+  height: 40px;
+}
+header ul.nav {
+  display: flex;
+}
+header ul.nav li {
+  display: inline-block;
+}
+header ul.nav a {
+  display: inline-block;
+  font-size: 1.8em;
+  line-height: 4em;
+  text-decoration: none;
+  color: white;
+  padding: 0 2em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+header ul.nav a:hover, header ul.nav a:focus {
+  background-color: #4b4b4b;
+}
+header #hamburger-menu {
+  display: none;
+}
+
+@media all and (max-width: 1024px) {
+  header .logo .desktop {
+    max-height: 20px;
+  }
+}
+@media all and (max-width: 768px) {
+  header .nav-menu {
+    flex-flow: row wrap;
+  }
+  header .logo {
+    max-width: unset;
+    width: 80px;
+    margin: 0;
+    padding: 1em 2em;
+  }
+  header .logo .desktop {
+    display: none;
+  }
+  header .logo .phone {
+    display: inline-block;
+  }
+  header ul.nav {
+    width: 100%;
+    flex-flow: column;
+  }
+  header ul.nav li {
+    display: block;
+    text-align: center;
+  }
+  header ul.nav a {
+    width: 100%;
+    font-size: 1.6em;
+  }
+  header ul.nav.hidden {
+    display: none;
+  }
+  header #hamburger-menu {
+    display: flex;
+    position: absolute;
+    padding: 1em;
+    top: 0;
+    right: 0;
+    height: 60px;
+    align-items: center;
+  }
+  header #hamburger-menu i {
+    color: white;
+  }
+  header #hamburger-menu i.hidden {
+    display: none;
+  }
+}
+.footer-wrapper {
+  background-color: #252525;
+  color: #d1d1d1;
+  padding: 2em 0;
+}
+.footer-wrapper .social {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.footer-wrapper .social a {
+  display: inline-block;
+  margin: 0 1em;
+}
+.footer-wrapper .social img {
+  width: 30px;
+  height: 30px;
+}
+.footer-wrapper .trademark {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  border-top: 1px solid;
+  padding-top: 1em;
+  margin-top: 2em;
+}
+.footer-wrapper .trademark span {
+  font-size: 1.4em;
+}
+
+@media all and (max-width: 1024px) {
+  .footer-wrapper .trademark {
+    width: 60%;
+  }
+}
+@media all and (max-width: 768px) {
+  .footer-wrapper .social img {
+    width: 25px;
+    height: 25px;
+  }
+  .footer-wrapper .trademark {
+    width: 70%;
+  }
+  .footer-wrapper .trademark span {
+    font-size: 1.3em;
+  }
+}
+@media all and (max-width: 480px) {
+  .footer-wrapper .social img {
+    width: 20px;
+    height: 20px;
+  }
+  .footer-wrapper .trademark {
+    width: 80%;
+  }
+  .footer-wrapper .trademark span {
+    font-size: 1.2em;
+  }
+}
+.slider-wrapper {
+  position: relative;
+}
+.slider-wrapper .arrow {
+  cursor: pointer;
+  padding: 5px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.slider-wrapper .arrow svg {
+  width: 40px;
+  height: 40px;
+  fill: #fff;
+}
+.slider-wrapper .prev-arrow {
+  left: 5%;
+}
+.slider-wrapper .next-arrow {
+  right: 5%;
+}
+.slider-wrapper .custom-dots {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.slider-wrapper .slick-dots li {
+  display: inline-block;
+}
+.slider-wrapper .slick-dots li button {
+  background: white;
+  border: none;
+  outline: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  margin: 0 5px;
+  text-indent: -9999px;
+  overflow: hidden;
+  font-size: 0;
+  -webkit-appearance: none;
+  padding: 0;
+  opacity: 0.5;
+}
+.slider-wrapper .slick-dots li.slick-active button {
+  opacity: 1;
+}
+.slider {
+  height: 500px;
+  width: 100%;
+}
+.slider .item {
+  height: 500px;
+}
+.slider .item.model-3 {
+  background: url(../img/slider/model-3.jpeg) center center no-repeat;
+  background-size: cover;
+}
+.slider .item.model-s {
+  background: url(../img/slider/model-s.png) center center no-repeat;
+  background-size: cover;
+}
+.slider .item.model-x {
+  background: url(../img/slider/model-x.jpg) center center no-repeat;
+  background-size: cover;
+}
+.slider .item.model-roadster {
+  background: url(../img/slider/model-roadster.jpeg) center center no-repeat;
+  background-size: cover;
+}
+.slider .item.model-semi {
+  background: url(../img/slider/model-semi.jpeg) center center no-repeat;
+  background-size: cover;
+}
+.slider .model-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  font-size: 3em;
+  color: white;
+}
+.slider .model-link:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.news-wrapper {
+  width: 80%;
+  margin: 15px auto;
+}
+.news-wrapper .news-title {
+  font-size: 3em;
+  font-weight: 600;
+  color: #E82127;
+  margin-top: 1em;
+  padding-left: 0.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 5px solid #E82127;
+  margin-bottom: 1em;
+}
+
+.post {
+  padding: 2em;
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+.post .post-image {
+  width: 20%;
+}
+.post .post-image .post-thumbnail {
+  max-width: 100%;
+}
+.post .post-content {
+  width: 75%;
+}
+.post:last-child {
+  border-bottom: none;
+  margin-bottom: none;
+}
+.post .post-date {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  color: lightgray;
+}
+.post .post-title {
+  display: inline-block;
+  font-size: 2.4em;
+  line-height: 1.5em;
+  font-weight: 600;
+  margin-right: 0.5em;
+}
+.post .post-preview {
+  margin-top: 0.5em;
+  display: block;
+  font-size: 1.8em;
+  line-height: 1.35em;
+  font-weight: 400;
+}
+.post .read-more {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.8em;
+  line-height: 1.3em;
+  color: #E82127;
+  margin-top: 0.65em;
+}
+
+.about-wrapper {
+  width: 80%;
+  margin: 30px auto;
+  text-align: center;
+}
+.about-wrapper .about-photo {
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.about {
+  text-align: left;
+}
+.about .about-title {
+  font-size: 3em;
+  line-height: 1.3em;
+  font-weight: 600;
+  color: #E82127;
+  margin-top: 1em;
+  padding-left: 0.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 5px solid #E82127;
+  margin-bottom: 1em;
+}
+.about .about-subtitle {
+  font-size: 2.4em;
+  line-height: 1.25em;
+  font-weight: 600;
+}
+.about p {
+  font-size: 1.8em;
+  line-height: 1.4em;
+  margin: 1em 0;
+}
+
+.contacts-wrapper {
+  margin: 30px auto;
+  width: 80%;
+}
+.contacts-wrapper .contacts-title {
+  font-size: 3em;
+  line-height: 1.3em;
+  font-weight: 600;
+  color: #E82127;
+  margin-top: 1em;
+  padding-left: 0.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 5px solid #E82127;
+  margin-bottom: 1em;
+}
+.contacts-wrapper .contacts-subtitle {
+  font-size: 2.4em;
+  line-height: 1.25em;
+  font-weight: 600;
+  margin-bottom: 0.25em;
+}
+.contacts-wrapper p {
+  font-size: 1.8em;
+  line-height: 1.5em;
+}
+.contacts-wrapper p b {
+  font-weight: 600;
+  color: #666;
+}
+.contacts-wrapper p a {
+  text-decoration: none;
+  color: #333;
+}
+.contacts-wrapper p a:hover, .contacts-wrapper p a:focus {
+  text-decoration: underline;
+}
+.contacts-wrapper .contacts .contacts-item-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.contacts-wrapper .contacts .contacts-item-wrapper .contact-item {
+  width: 31%;
+  padding: 1em;
+  text-align: center;
+  margin-top: 1em;
+}
+.contacts-wrapper .contact-form form {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.contacts-wrapper .contact-form form input {
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  width: 45%;
+  font-size: 1.8em;
+  line-height: 1.5em;
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  border-bottom: 2px solid #f27d81;
+}
+.contacts-wrapper .contact-form form input:hover, .contacts-wrapper .contact-form form input:focus {
+  border-bottom: 2px solid #E82127;
+}
+.contacts-wrapper .contact-form form input[type=submit] {
+  background-color: #ed4f54;
+  border-bottom: none;
+  border-radius: 0.25em;
+  padding: 0.75em 2em;
+  color: #fff;
+}
+.contacts-wrapper .contact-form form input[type=submit]:hover, .contacts-wrapper .contact-form form input[type=submit]:focus {
+  background-color: #E82127;
+}
+.contacts-wrapper .contact-form form textarea {
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.8em;
+  line-height: 1.5em;
+  margin: 1em 0;
+  padding: 1em;
+  border: 2px solid #f27d81;
+  border-radius: 0.25em;
+}
+.contacts-wrapper .worldwide-offices .office-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.contacts-wrapper .worldwide-offices .office-wrapper .office {
+  width: 45%;
+  padding: 1em;
+  margin: 1em;
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 0.5em;
+}
+.contacts-wrapper .worldwide-offices .office-wrapper .map iframe {
+  width: 100%;
+  border: 0;
+}
+.contacts-wrapper .worldwide-offices .office-wrapper .address h3 {
+  margin-top: 0.25em;
+}
+.contacts-wrapper .worldwide-offices .office-wrapper .address p {
+  padding-bottom: 0.5em;
+}
+
+.models-wrapper {
+  width: 80%;
+  margin: 30px auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.models-wrapper .model {
+  width: 50%;
+  text-align: center;
+  font-size: 2em;
+  padding: 1em;
+  position: relative;
+  border-radius: 5px;
+}
+.models-wrapper .model img {
+  max-width: 100%;
+  border-radius: 0.25em;
+}
+.models-wrapper .model .model-detail {
+  position: absolute;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  padding: 2em 1em;
+  flex-flow: column;
+  justify-content: space-between;
+}
+.models-wrapper .model .model-detail a {
+  align-self: flex-end;
+  padding: 1em 2em;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #aaa;
+  border-top-left-radius: 2em;
+  border-bottom-left-radius: 2em;
+}
+.models-wrapper .model .model-detail a:hover, .models-wrapper .model .model-detail a:focus {
+  background-color: rgba(0, 0, 0, 0.65);
+  color: #fff;
+}
+
+.car-model {
+  color: white;
+  position: relative;
+}
+.car-model .controls {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+}
+.car-model .controls h2 {
+  cursor: pointer;
+  font-size: 3em;
+  font-weight: 600;
+  color: #333;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 5px solid #333;
+  width: 50%;
+}
+.car-model .controls h2.selected {
+  color: #E82127;
+  border-bottom: 5px solid #E82127;
+}
+.car-model .controls #select-exterior {
+  text-align: left;
+  padding-left: 20%;
+}
+.car-model .controls #select-interior {
+  text-align: right;
+  padding-right: 20%;
+}
+.car-model .params {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  height: 600px;
+  position: relative;
+}
+.car-model .params.hidden {
+  display: none;
+}
+.car-model .params img.params-image {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.car-model .params .params-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  padding-bottom: 30px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.car-model .params .param {
+  width: 20%;
+  padding: 2em;
+  text-align: center;
+}
+.car-model .params .param img {
+  width: 60px;
+  height: 60px;
+}
+.car-model .params .param p {
+  font-weight: 600;
+  font-size: 2.2em;
+  line-height: 1.5em;
+  margin-top: 0.5em;
+}
+.car-model .specs {
+  background-color: #191822;
+  padding: 60px 0;
+}
+.car-model .specs h2 {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 3em;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 1em;
+  padding-left: 0.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 5px solid #fff;
+  margin-bottom: 1em;
+}
+.car-model .specs .table {
+  margin: 0 auto;
+  text-align: center;
+  width: 60%;
+}
+.car-model .specs table {
+  width: 100%;
+  font-size: 2em;
+  text-align: left;
+}
+.car-model .specs table tr {
+  border-bottom: 1px solid #fff;
+}
+.car-model .specs table tr:last-child {
+  border-bottom: none;
+}
+.car-model .specs table th {
+  font-weight: 600;
+}
+.car-model .specs table th, .car-model .specs table td {
+  padding: 1em;
+  vertical-align: middle;
+}
+.car-model .gallery {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+.car-model .gallery h2 {
+  font-size: 3em;
+  font-weight: 600;
+  color: #E82127;
+  margin-top: 1em;
+  padding-left: 0.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 5px solid #E82127;
+  margin-bottom: 1em;
+}
+.car-model .gallery .item {
+  width: 80%;
+  margin: 0 auto;
+}
+.car-model .gallery .item img {
+  max-width: 100%;
+}
+
+@media all and (max-width: 1024px) {
+  .car-model .controls h2 {
+    font-size: 2.8em;
+  }
+  .car-model .controls #select-exterior {
+    padding-left: 15%;
+  }
+  .car-model .controls #select-interior {
+    padding-right: 15%;
+  }
+  .car-model .specs h2 {
+    font-size: 2.8em;
+  }
+  .car-model .specs table {
+    font-size: 1.9em;
+  }
+  .models-wrapper {
+    justify-content: center;
+  }
+  .models-wrapper .model {
+    font-size: 1.8em;
+    width: 75%;
+  }
+  .contacts-wrapper .contacts .contacts-item-wrapper .contact-item {
+    width: 50%;
+    text-align: left;
+  }
+}
+@media all and (max-width: 768px) {
+  .car-model .controls h2 {
+    font-size: 2.6em;
+  }
+  .car-model .controls #select-exterior {
+    padding-left: 10%;
+  }
+  .car-model .controls #select-interior {
+    padding-right: 10%;
+  }
+  .car-model .params .params-wrapper {
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+  }
+  .car-model .params .param {
+    width: 80%;
+  }
+  .car-model .params .param img {
+    width: 50px;
+    height: 50px;
+  }
+  .car-model .params .param p {
+    font-size: 1.6em;
+  }
+  .car-model .specs h2 {
+    font-size: 2.6em;
+  }
+  .car-model .specs table {
+    font-size: 1.8em;
+  }
+  .car-model .specs .table {
+    width: 70%;
+  }
+
+  .models-wrapper .model {
+    font-size: 1.7em;
+    width: 85%;
+  }
+  .models-wrapper .model .model-detail a {
+    align-self: unset;
+    padding: 1em 2em;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: #ddd;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .contacts-wrapper .contacts-title {
+    font-size: 2.6em;
+  }
+  .contacts-wrapper .contacts-subtitle {
+    font-size: 2.2em;
+  }
+  .contacts-wrapper p {
+    font-size: 1.6em;
+  }
+  .contacts-wrapper .contacts .contacts-item-wrapper .contact-item {
+    width: 100%;
+  }
+  .contacts-wrapper .contact-form form input {
+    width: 100%;
+  }
+  .contacts-wrapper .worldwide-offices .office-wrapper .office {
+    width: 100%;
+  }
+
+  .about-wrapper .about-photo {
+    max-width: 100%;
+  }
+
+  .about .about-title {
+    font-size: 2.8em;
+  }
+  .about .about-subtitle {
+    font-size: 2.2em;
+  }
+  .about p {
+    font-size: 1.6em;
+  }
+
+  .post .post-title {
+    display: block;
+    margin-right: 0;
+  }
+}
+@media all and (max-width: 480px) {
+  .car-model .controls h2 {
+    font-size: 2.4em;
+  }
+  .car-model .controls #select-exterior {
+    padding-left: 5%;
+  }
+  .car-model .controls #select-interior {
+    padding-right: 5%;
+  }
+  .car-model .specs h2 {
+    font-size: 2.4em;
+  }
+  .car-model .specs table {
+    font-size: 1.6em;
+  }
+  .car-model .specs .table {
+    width: 90%;
+  }
+
+  .models-wrapper .model {
+    font-size: 1.6em;
+    width: 100%;
+  }
+}
+
+body.login{
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+
+form.login{
+  width: 500px;
+  border:2px solid white;
+  padding: 30px;
+  background: #fff;
+  border-radius: 15px;
+}
+h2.login{
+  text-align: center;
+  margin-bottom: 3%;
+
+}
+
+input.login{
+  display: block;
+  border: 2px solid #ccc;
+  width: 95%;
+  padding: 2%;
+  margin: 10 px auto;
+}
+label.login{
+  color: #888;
+  font-size: 18px;
+  padding: 10px;
+}
+
+button{
+    background-color: #252525;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+button:hover{
+  background-color: #4b4b4b;
+}
+
+a.login{
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
