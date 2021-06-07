@@ -1,0 +1,13 @@
+CREATE TABLE todolist(
+  id int NOT NULL AUTO_INCREMENT,
+  TASK varchar (50)NOT NULL,
+  title varchar(50)NOT NULL,
+    PRIMARY KEY (id)
+  );
+  
+  INSERT INTO news
+  (TASK,title)
+  VALUES
+  ("task1","title1",1),
+  ("task2","title2",2),
+  ("task3","title3",3);
